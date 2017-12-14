@@ -50,6 +50,10 @@ module.exports = function ({types: t}) {
         // Find files
         let dirname = Path.dirname(state.file.opts.filename);
         pattern = Path.resolve(dirname, pattern);
+        if (process.platform === 'win32') {
+          pattern = pattern.replace(/\\/g, '/');
+        }
+
         let files = glob.sync(pattern, {strict: true, nodir: true});
 
         // Capture matches

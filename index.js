@@ -54,7 +54,8 @@ module.exports = function ({types: t}) {
           pattern = pattern.replace(/\\/g, '/');
         }
 
-        let files = glob.sync(pattern, {strict: true, nodir: true});
+        let files = glob.sync(pattern, {strict: true, nodir: true})
+                        .filter(file => file !== state.file.opts.filename);
 
         // Capture matches
         let re = micromatch.makeRe(pattern, {capture: true});

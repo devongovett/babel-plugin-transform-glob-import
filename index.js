@@ -55,6 +55,10 @@ module.exports = function ({types: t}) {
         }
 
         let files = glob.sync(pattern, {strict: true, nodir: true});
+        if (files.length === 0) {
+          pattern = 'node_modules/' + path.node.source.value;
+          files = glob.sync(pattern, {strict: true, nodir: true});
+        }
 
         // Capture matches
         let re = micromatch.makeRe(pattern, {capture: true});

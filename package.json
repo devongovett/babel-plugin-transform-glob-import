@@ -2,16 +2,20 @@
   "name": "babel-plugin-transform-glob-import",
   "version": "1.0.1",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devongovett/babel-plugin-transform-glob-import.git"
+  },
   "license": "MIT",
   "dependencies": {
-    "babel-template": "^6.26.0",
+    "@babel/template": "^7.12.0",
     "glob": "^7.1.2",
-    "micromatch": "^3.1.0"
+    "micromatch": "^4.0.4"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+    "@babel/cli": "^7.13.14",
+    "@babel/core": "^7.13.15",
+    "@babel/plugin-transform-modules-commonjs": "^7.13.8",
     "mocha": "^3.5.3"
   },
   "scripts": {

@@ -1,7 +1,7 @@
 const glob = require('glob');
 const micromatch = require('micromatch');
 const Path = require('path');
-const template = require('babel-template');
+const template = require('@babel/template').default;
 
 const requireTemplate = template('INTEROP(require(FILE)).default');
 

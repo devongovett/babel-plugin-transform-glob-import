@@ -8,7 +8,7 @@ describe('babel-plugin-transform-glob-import', function () {
       __dirname + '/fixtures',
       '-d',
       __dirname + '/compiled',
-      '--plugins=' + pluginPath + ',babel-plugin-transform-es2015-modules-commonjs'
+      '--plugins=' + pluginPath + ',@babel/plugin-transform-modules-commonjs'
     ]);
 
     let stderr = res.stderr.toString();
